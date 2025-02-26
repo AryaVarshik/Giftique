@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalised gifts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: #f5f5f5;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #3b548a;
+            padding: 15px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            height: 50px;
+        }
+        .search-bar {
+            flex: 1;
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+            background: white;
+            width: 10px;
+            border-radius: 30px;
+            padding: 5px 15px;
+        }
+        .search-bar input {
+            width: 50%;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding: 8px;
+        }
+        .icon-button {
+    width: 40px; /* Button size */
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button img {
+    width: 24px;  /* Ensures the image remains small */
+    height: 24px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintains aspect ratio */
+}
+
+.icon-button:hover {
+    opacity: 0.8;
+}
+
+        .menu-button {
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            margin-left: 15px;
+            background: none;
+            border: none;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        /* Navbar */
+        .navbar {
+            background-color: #3b548b;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+        }
+        .menu-icon {
+            cursor: pointer;
+            font-size: 24px;
+            user-select: none;
+        }
+        .login {
+            background: #d9534f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .login:hover {
+            background: #c9302c;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 60px; /* Adjusted for navbar spacing */
+            right: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 180px;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+        }
+        .dropdown a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #3b548b;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .dropdown a:hover {
+            background: #3b548b;
+            color: white;
+        }
+
+        /* Show dropdown */
+        .dropdown.show {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            background-color: #2c3e50;
+            padding: 10px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .nav-links a.active {
+            border-bottom: 2px solid #ffcc00;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .fancy-heading {
+            text-align: center;
+            font-size: 2.5em;
+            font-family: 'Cursive', sans-serif;
+            color: #d9534f;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img  {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .image-container img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid black
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .product button {
+            background: #455de2;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .favorite {
+            background: white;
+        }
+        .ecommerce-features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.feature {
+    flex: 1;
+    max-width: 250px;
+}
+
+.feature img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.feature h4 {
+    font-size: 18px;
+    color: #3b548b;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #555;
+}
+       
+        .footer {
+            background-color: #3b548b;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        .footer-section h4 {
+            margin-bottom: 15px;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdown-menu");
+        dropdown.classList.toggle("show");
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function(event) {
+        var dropdown = document.getElementById("dropdown-menu");
+        var menuIcon = document.querySelector(".menu-icon");
+
+        if (!menuIcon.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.classList.remove("show");
+        }
+    });
+</script>
+<script>
+    function addToCart(name, price, image) {
+        let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        cartItems.push({ name, price, image });
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+        alert(`${name} has been added to your cart!`);
+    }
+</script>
+
+<script>
+    function toggleDropdown() {
+        let menu = document.getElementById("dropdown-menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+</script>
+<body>
+    <center>
+        <nav class="navbar">
+            <img src="444a2c23-6519-4a9c-828d-ae1edd0d9a90.jpg" alt="Giftique Logo" class="logo">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for gifts...">
+            </div>
+            <div class="icons">
+                <button><i class="fa-regular fa-heart"></i></button>
+                <button onclick="window.location.href='cart.html'">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </button>
+                <button><i class="fa-regular fa-user"></i></button>
+                <button class="login" onclick="window.location.href='login.html'">Login</button>
+            </div>
+        </nav>
+        <!-- Navbar -->
+    <div class="navbar">
+        <div></div>
+        <div class="menu-icon" onclick="toggleDropdown()">⋮</div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown" id="dropdown-menu">
+        <a href="#">24x7 Service</a>
+        <a href="#">Notifications</a>
+        <a href="#">Settings</a>
+    </div>
+    </nav>
+    <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="new-arrivals.html">New Arrivals</a>
+        <a href="personalized-gifts.html">Personalized Gifts</a>
+        <a href="occasions.html">Occasion Based Gifts</a>
+    </nav><br><br>
+    <div class="container">
+        <h1 class="fancy-heading">personalised gifts</h1>
+        <div class="product-grid">
+            <!-- Example Product Structure -->
+            <div class="product">
+                <img src="pers 4.jpg" alt="Product 1">
+                <h3>customized mobile case</h3>
+                <p>$3</p>
+                 <button onclick="addToCart('customized mobile case', 3, 'pers.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="personalized 3.jpg" alt="Product 2">
+                <h3>fancy chain</h3>
+                <p>$9</p>
+                 <button onclick="addToCart('fancy chain', 9, 'personalized 3.jpg ')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="personalized diary.jpg" alt="Product 3">
+                <h3>personalized diary</h3>
+                <p>$4</p>
+                 <button onclick="addToCart('personalized diary', 4, 'personalized diary.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="personalized key chain.jpg" alt="Product 4">
+                <h3>personalized key chain</h3>
+                <p>$1</p>
+                 <button onclick="addToCart('personalized key chain', 1, 'personalized key chain.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="personalized round photo frame.jpg" alt="Product 5">
+                <h3>moon photo frame</h3>
+                <p>$50<p>
+                 <button onclick="addToCart('moon photo frame', 50, 'personalized round photo frame.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="plane photo frame.jpg" alt="Product 6">
+                <h3>photo frame</h3>
+                <p>$4</p>
+                 <button onclick="addToCart('photo frame', 4, 'photo frame.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="premium_photo-1681487704787-1d79d9f7ed0f.avif" alt="Product 7">
+                <h3>gold coated personalized key chain</h3>
+                <p>$67</p>
+                 <button onclick="addToCart('gold coated personalized key chain', 67, 'premium_photo-1681487704787-1d79d9f7ed0f.avif')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="friends photo frame.jpg" alt="Product 8">
+                <h3>friends photo frame</h3>
+                <p>$45</p>
+                 <button onclick="addToCart('friends photo frame', 45, 'friends photo frame.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="pers 4.jpg" alt="Product 9">
+                <h3>customized mobile case</h3>
+                <p>$3</p>
+                 <button onclick="addToCart('customized mobile case',3, 'pers 4.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="pendant chain.jpg" alt="Product 10">
+                <h3>pearls chain</h3>
+                <p>$345</p>
+                 <button onclick="addToCart('pearls chain', 345, 'pendantchain.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="mug 3.jpg" alt="Product 11">
+                <h3>bestfriends mug</h3>
+                <p>$76</p>
+                 <button onclick="addToCart('bestfriends mug', 76, 'mug 3.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+            <div class="product">
+                <img src="necklace.jpg" alt="Product 12">
+                <h3>necklace</h3>
+                <p>$1000</p>
+                 <button onclick="addToCart('necklace', 1000, 'necklace.jpg')">Add to Cart</button>
+                <button class="favorite">❤️</button>
+            </div>
+        </div>
+    </div>
+    <section class="ecommerce-features">
+        <div class="feature">
+            <div class="feature"><i class="fa-solid fa-truck"></i> Free Shipping</div>
+            <h4>Free Shipping</h4>
+            <p>Enjoy free shipping on all orders with no minimum purchase.</p>
+        </div>
+        <div class="feature">
+            <div class="feature"><i class="fa-solid fa-lock"></i> Secure Payment</div>
+            <h4>100% Secure Payment</h4>
+            <p>We ensure secure transactions with trusted payment gateways.</p>
+        </div>
+        <div class="feature">
+            <div class="feature"><i class="fa-solid fa-check-circle"></i> Quality Guarantee</div>
+            <h4>Quality Guarantee</h4>
+            <p>Our products go through strict quality checks to ensure the best.</p>
+        </div>
+        <div class="feature">
+            <div class="feature"><i class="fa-solid fa-gift"></i> Customization</div>
+            <h4>Customization</h4>
+            <p>Personalize gifts with names, messages, and unique designs.</p>
+        </div>
+    </section>
+         <footer class="footer">
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Company Info</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Pinterest</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Payment Methods</h4>
+                <ul>
+                    <li>Credit & Debit Cards</li>
+                    <li>PayPal</li>
+                    <li>Google Pay</li>
+                    <li>Apple Pay</li>
+                </ul>
+            </div>
+        </footer>
+        </center>
+</body>
+</html>

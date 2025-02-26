@@ -1,0 +1,112 @@
+<!-- cart.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giftique - Cart</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 32px;
+            color: #3b548b;
+            margin-top: 20px;
+        }
+        .cart-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .cart-product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 60%;
+            background: #fff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .cart-product img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+        }
+        .cart-product h3 {
+            flex: 1;
+            font-size: 18px;
+            color: #2d3436;
+        }
+        .cart-product p {
+            font-size: 16px;
+            color: #636e72;
+        }
+        .cart-product button {
+            background-color: #d9534f;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .cart-product button:hover {
+            background-color: #c9302c;
+        }
+        #proceed-btn {
+            background-color: #3b548b;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        #proceed-btn:hover {
+            background-color: #455de2;
+        }
+    </style>
+    <script>
+        function loadCart() {
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartContainer = document.getElementById("cart-items");
+            cartContainer.innerHTML = "";
+            cartItems.forEach((item, index) => {
+                let productElement = document.createElement("div");
+                productElement.classList.add("cart-product");
+                productElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <h3>${item.name}</h3>
+                    <p>$${item.price}</p>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                `;
+                cartContainer.appendChild(productElement);
+            });
+        }
+
+        function removeFromCart(index) {
+            let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+            cartItems.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+            loadCart();
+        }
+    </script>
+</head>
+<body onload="loadCart()">
+    <h1>Your Cart</h1>
+    <div id="cart-items" class="cart-container"></div>
+    <button id="proceed-btn" onclick="window.location.href='checkout.html'">Proceed to Buy</button>
+</body>
+</html>

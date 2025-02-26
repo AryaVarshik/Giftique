@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Gifts</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: #f5f5f5;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #3b548a;
+            padding: 15px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            height: 50px;
+        }
+        .search-container {
+      margin: 20px;
+      text-align: center;
+    }
+
+    .search-bar {
+      padding: 10px;
+      width: 950px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      border-radius:30px;
+      outline: none;
+    }
+        .icon-button {
+    width: 40px; /* Button size */
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button img {
+    width: 24px;  /* Ensures the image remains small */
+    height: 24px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintains aspect ratio */
+}
+
+.icon-button:hover {
+    opacity: 0.8;
+}
+        .menu-button {
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            margin-left: 15px;
+            background: none;
+            border: none;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        /* Navbar */
+        .navbar {
+            background-color: #3b548b;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+        }
+        .menu-icon {
+            cursor: pointer;
+            font-size: 24px;
+            user-select: none;
+        }
+        .login {
+            background: #d9534f;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .login:hover {
+            background: #c9302c;
+        }
+
+        /* Dropdown */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 60px; /* Adjusted for navbar spacing */
+            right: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 180px;
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+        }
+        .dropdown a {
+            display: block;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: #3b548b;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .dropdown a:hover {
+            background: #3b548b;
+            color: white;
+        }
+
+        /* Show dropdown */
+        .dropdown.show {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            background-color: #2c3e50;
+            padding: 10px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        .nav-links a.active {
+            border-bottom: 2px solid #ffcc00;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }v
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .fancy-heading {
+            text-align: center;
+            font-size: 2.5em;
+            font-family: 'Cursive', sans-serif;
+            color: #d9534f;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img  {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .image-container img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid black
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .product button {
+            background: #455de2;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .favorite {
+            background: white;
+        }
+        .ecommerce-features {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.feature {
+    flex: 1;
+    max-width: 250px;
+}
+
+.feature img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.feature h4 {
+    font-size: 18px;
+    color: #3b548b;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #555;
+}
+       
+        .footer {
+            background-color: #3b548b;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        .footer-section h4 {
+            margin-bottom: 15px;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-section ul li a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<script>
+    function addToCart(name, price, image) {
+        let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+        cartItems.push({ name, price, image });
+        localStorage.setItem("cart", JSON.stringify(cartItems));
+        alert(`${name} has been added to your cart!`);
+    }
+</script>
+<body>
+            <nav class="navbar">
+                <img src="logo.jpeg" alt="Giftique Logo" class="logo">
+                <div class="search-container">
+                    <input type="text" id="search-bar" class="search-bar" placeholder="Search for products...">
+                    <i class="fas fa-search search-bar-icon"></i>
+                  </div>
+                <div class="icons">
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button onclick="window.location.href='cart.html'">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                    <button><i class="fa-regular fa-user"></i></button>
+                    <button class="login" onclick="window.location.href='login.html'">Login</button>
+                </div>
+            
+            <!-- Navbar -->
+        <div class="navbar">
+            <div></div>
+            <div class="menu-icon" onclick="toggleDropdown()">⋮</div>
+        </div>
+        
+        <!-- Dropdown Menu -->
+        <div class="dropdown" id="dropdown-menu">
+            <a href="#">24x7 Service</a>
+            <a href="#">Notifications</a>
+            <a href="#">Settings</a>
+        </div>
+        </nav>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="new-arrivals.html">New Arrivals</a>
+                <a href="personalized-gifts.html">Personalized Gifts</a>
+                <a href="occasions.html">Occasion Based Gifts</a>
+            </nav><br><br>
+            <center>
+    <div class="container">
+        <h1 class="fancy-heading">Birthday Gifts</h1>
+        <div class="product-grid">
+            <!-- Sample product repeated 12 times -->
+            <div class="product">
+                <img src="anniversary gift4.jpg" alt="Birthday Gift 1">
+                <h3>bangle</h3>
+                <p>$47</p>
+                <div class="buttons">
+                    <button onclick="addToCart('bangle', 170, 'anniversary gift4.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <!-- Duplicate the above product block for 12 products with different images -->
+            <div class="product">
+                <img src="ch 6.jpg" alt="Birthday Gift 2">
+                <h3>chocolate box</h3>
+                <p>$65</p>
+                <div class="buttons">
+                    <button onclick="addToCart('chocolate box', 65, 'ch 6.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="diw gft2.jpg" alt="Birthday Gift 3">
+                <h3>shiva chain</h3>
+                <p>$17</p>
+                <div class="buttons">
+                    <button onclick="addToCart('hamper', 17, 'diw gft2.jp')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="sunset photo frame.jpg" alt="Birthday Gift 1">
+                <h3>sunset photo frame</h3>
+                <p>$29</p>
+                <div class="buttons">
+                    <button onclick="addToCart('sunset photo frame', 29, 'sunset photo frame.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="ann gift 12.jpg" alt="Birthday Gift 1">
+                <h3>locket</h3>
+                <p>$73</p>
+                <div class="buttons">
+                    <button onclick="addToCart('locket', 73, 'ann gift 12.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="hanuman idol.jpg" alt="Birthday Gift 1">
+                <h3>hanuman idol</h3>
+                <p>$491</p>
+                <div class="buttons">
+                    <button onclick="addToCart('hanuman idol', 491, 'hanuman idol.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="single ring.jpg" alt="Birthday Gift 1">
+                <h3>ring</h3>
+                <p>$201</p>
+                <div class="buttons">
+                    <button onclick="addToCart('ring', 201, 'single ring.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="istockphoto-2179893047-612x612.webp" alt="Birthday Gift 1">
+                <h3>toy</h3>
+                <p>$1075</p>
+                <div class="buttons">
+                    <button onclick="addToCart('toy', 1075, 'istockphoto-2179893047-612x612.webp')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="bracelets.jpg" alt="Birthday Gift 1">
+                <h3>bracelets</h3>
+                <p>$264</p>
+                <div class="buttons">
+                    <button onclick="addToCart('bracelets', 264, 'bracelets.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="radha krishna idol.jpg" alt="Birthday Gift 1">
+                <h3>radha krishna idol</h3>
+                <p>$92</p>
+                <div class="buttons">
+                    <button onclick="addToCart('radha krishna idol', 92, 'radha krishna idol.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="mug 2.jpg" alt="Birthday Gift 1">
+                <h3>mug</h3>
+                <p>$82</p>
+                <div class="buttons">
+                    <button onclick="addToCart('mug', 82, 'mug 2.jpg')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="new arr 2.jpg" alt="Birthday Gift 1">
+                <h3>couple rings</h3>
+                <p>$75</p>
+                <div class="buttons">
+                    <button onclick="addToCart('couple rings', 75, 'new arr 2.jp')">Add to Cart</button>
+                    <button class="btn fav-btn">❤️</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+            <section class="ecommerce-features">
+                <div class="feature">
+                    <div class="feature"><i class="fa-solid fa-truck"></i> Free Shipping</div>
+                    <h4>Free Shipping</h4>
+                    <p>Enjoy free shipping on all orders with no minimum purchase.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature"><i class="fa-solid fa-lock"></i> Secure Payment</div>
+                    <h4>100% Secure Payment</h4>
+                    <p>We ensure secure transactions with trusted payment gateways.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature"><i class="fa-solid fa-check-circle"></i> Quality Guarantee</div>
+                    <h4>Quality Guarantee</h4>
+                    <p>Our products go through strict quality checks to ensure the best.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature"><i class="fa-solid fa-gift"></i> Customization</div>
+                    <h4>Customization</h4>
+                    <p>Personalize gifts with names, messages, and unique designs.</p>
+                </div>
+            </section>
+                 <footer class="footer">
+                    <div class="footer-section">
+                        <h4>Customer Service</h4>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Returns & Exchanges</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company Info</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Pinterest</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Payment Methods</h4>
+                        <ul>
+                            <li>Credit & Debit Cards</li>
+                            <li>PayPal</li>
+                            <li>Google Pay</li>
+                            <li>Apple Pay</li>
+                        </ul>
+                    </div>
+                </footer>
+            
+            <!-- Add more products up to 12 -->
+       
+</body>
+</html>
